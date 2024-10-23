@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+    <center>
+        <table border="5">
+            <div>
+                <td><a href="Indice.html">Indice</a></td>
+                <td><a href="Ejercicio1.html">Ejercicio 1</a></td>
+                <td><a href="Ejercicio3.html">Ejercicio 3</a></td>
+                <td><a href="Ejercicio4.html">Ejercicio 4</a></td>
+            </div>
+        </table>
+        <h1>Ejercicio 2 : Fechas aleatorias.</h1>
+
+        <script>
+            //Creamos las variables correspondientes
+            let dia, mes, anio;
+
+            // Generar mes (0-11) y año (1900-2100)
+            mes = Math.floor(Math.random() * 12); // Meses entre 0 (enero) y 11 (diciembre)
+            anio = Math.floor(Math.random() * (2101 - 1900)) + 1900; // Años entre 1900 y 2100
+
+            // Generar el día, considerando si el mes es febrero
+            if (mes === 1) { // Febrero
+                dia = Math.floor(Math.random() * 29) + 1; // Días entre 1 y 29
+            } else if (mes === 3 || mes === 5 || mes === 8 || mes === 10) {
+                // Meses con 30 días: abril, junio, septiembre, noviembre
+                dia = Math.floor(Math.random() * 30) + 1; // Días entre 1 y 30
+            } else {
+                // Meses con 31 días: enero, marzo, mayo, julio, agosto, octubre, diciembre
+                dia = Math.floor(Math.random() * 31) + 1; // Días entre 1 y 31
+            }
+
+            // Mostrar la fecha generada
+            document.write("La fecha generada es " + dia + "/" + mes + "/" + anio + ".");
+
+        </script>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+    <center>
+        <table border="5">
+            <div>
+                <td><a href="Indice.html">Indice</a></td>
+                <td><a href="Ejercicio1.html">Ejercicio 1</a></td>
+                <td><a href="Ejercicio2.html">Ejercicio 2</a></td>
+                <td><a href="Ejercicio4.html">Ejercicio 4</a></td>
+            </div>
+        </table>
+        <h1>Ejercicio 3 : números, menor, mayor y media.</h1>
+
+        <script>
+            //Creamos las variables y las inicializamos
+            var n, num, media, max, min, contador, sumaTotalNum;
+            max = 0;
+            min = 9;
+            num = 0;
+            contador = 0;
+            sumaTotalNum = 0;
+            //Introducimos la cantidad total de números que queremos que el programa nos pida
+            pregunta = parseInt(prompt("Introduce una cantidad total para los números que queremos usar", "0"));
+            n = pregunta;
+            //Bucle que funcionara siempre que no lleguemos al ultimo número
+            while (contador != n) {
+                pregunta2 = parseInt(prompt("Introduce un número", "0"));
+                num = pregunta2;
+                contador++;
+                //Cada número introducido sera sumado y almacenado en esta variable para posteriormente calcular la media.
+                sumaTotalNum += pregunta2;
+                //Calculamos el numero máximo y el mínimo.
+                if (num > max) {
+                    max = num;
+                } else {
+                    min = num;
+                }
+            }
+            //Realizamos la media
+            media = parseFloat(sumaTotalNum / n);
+            //Devolvemos por pantalla el maximo, el minimo y la media.
+            alert("El número mayor del conjunto es: " + max + ".");
+            alert("El número menor del conjunto es: " + min + ".");
+            alert("La media de los números introducidos es: " + media + ".");
+
+        </script>
+    </center>
+</body>
+
+</html>

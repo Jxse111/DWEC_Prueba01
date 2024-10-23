@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+    <center>
+        <table border="5">
+            <div>
+                <td><a href="Indice.html">Indice</a></td>
+                <td><a href="Ejercicio1.html">Ejercicio 1</a></td>
+                <td><a href="Ejercicio2.html">Ejercicio 2</a></td>
+                <td><a href="Ejercicio3.html">Ejercicio 3</a></td>
+            </div>
+        </table>
+        <h1>Ejercicio 4 : contador de carácteres de un texto, por busqueda de carácter.</h1>
+
+        <script>
+            //Creamos las variables correspondientes
+            var texto = prompt("Introduce un texto con al menos 5 caracteres:");
+            //Si el tamaño del texto es menor que cinco, saltara un error
+            if (texto.length < 5) {
+                alert("El texto debe tener al menos 5 caracteres.");
+            } else {
+                //Sino te pedira que introducas un caracter para ver si encuentra alguna coincidencia
+                var caracter = prompt("Introduce un carácter:");
+                //Solo puedes introducir uno si introduces mas de uno el programa devuelve un error
+                if (caracter.length !== 1) {
+                    alert("Debes ingresar un solo carácter.");
+                } else {
+                    //Y si has introducido un caracter, buscara a lo largo del texto que has introducido en busca de coincidencias y se iran incrementando con un contador.
+                    var contador = 0;
+                    for (var i = 0; i < texto.length; i++) {
+                        if (texto[i].toLowerCase() === caracter.toLowerCase()) {
+                            contador++;
+                        }
+                    }
+                    //Una vez recorrida la cadena de texto de forma completa devolvemos por pantalla el mensaje que contiene el caracter que buscabamos y las veces que ha aparecido en nuestro texto
+                    document.write("El carácter '" + caracter + "' aparece " + contador + " veces en el texto.");
+                }
+            }
+        </script>
+    </center>
+</body>
+
+</html>

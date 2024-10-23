@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+    <center>
+        <table border="5">
+            <div>
+                <td><a href="Indice.html">Indice</a></td>
+                <td><a href="Ejercicio2.html">Ejercicio 2</a></td>
+                <td><a href="Ejercicio3.html">Ejercicio 3</a></td>
+                <td><a href="Ejercicio4.html">Ejercicio 4</a></td>
+            </div>
+        </table>
+        <h1>Ejercicio 1 : Correccion de código.</h1>
+
+        <script>
+            // Realicemos un programa que lee un número, lo muestra en pantalla, y hace un bucle con el mismo de 1 a 50. 
+            let variable1, variable2 = 3; //declaro variables.
+            let nombre = prompt("dime tu nombre : ");
+            variable1 = Math.floor(Math.random() * 50) + 1; // Cambié Math.random(1) * 50 a Math.floor(Math.random() * 50) + 1 para obtener un número entero entre 1 y 50.
+            // Math.random no puede incluir números dentro de los paréntesis
+            while (variable1 > 0) { // Cambié la condición a variable1 > 0 para que funcione correctamente.
+                // Verificamos que la variable1 contenga un número distinto a 0
+                let i = variable1; // let i = variable1  ya que variable1 ya es un entero.
+                while (i > 0) { // Continuará hasta que i llegue a 0. // contador que se va a reducir desde la variable1 que ha generado un número entre 1 y 50
+                    document.write(nombre); // Muestra el nombre en pantalla.
+                    i--; // Decremento de i.
+                }
+                variable1--; // Decremento de variable1 para que el bucle externo termine.
+            }
+        </script>
+    </center>
+</body>
+
+</html>
